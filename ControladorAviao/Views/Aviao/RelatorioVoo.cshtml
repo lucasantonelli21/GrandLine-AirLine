@@ -1,0 +1,81 @@
+﻿@model List<VooModel>
+@{
+    ViewData["Title"] = "Listagem de Voos";
+}
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" asp-controller="Aviao" asp-action="CadastrarVoo" role="button">Adicionar novo Voo</a>
+    </div>
+
+    <br />
+
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+
+    <br />
+
+    <h1 class="display-4">Listagem de Voos</h1>
+
+    <table id="table-voos" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th scope="col">Número do Voo</th>
+                <th scope="col">Data</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Local de Partida</th>
+                <th scope="col">Local de Chegada</th>
+                <th scope="col">Valor Normal</th>
+                <th scope="col">Valor Especial</th>
+                <th scope="col">Avião que realizará o Voo</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var voo in Model)
+                {
+                    <tr>
+                        <td>voo.nVoo</td>
+                        <td>voo.Data</td>
+                        <td>voo.horario</td>
+                        <td>voo.localPartida</td>
+                        <td>voo.localChegada</td>
+                        <td>voo.valorNormal</td>
+                        <td>voo.valorEspecial</td>
+                        <td>voo.aviaoId</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-primary">Editar</a>
+                                <a role="button" class="btn btn-danger">Apagar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+
+                <tr class="odd"><td valign="top" colspan="7">Nenhum Voo encontrado</td></tr>
+            }
+        </tbody>
+    </table>
+
+</div>

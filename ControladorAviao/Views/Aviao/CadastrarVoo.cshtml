@@ -1,0 +1,57 @@
+﻿@model VooModel
+@{
+    ViewData["Title"] = "Cadastrar Voo";
+}
+
+
+<div class='text-center'>
+    <h1 class="display-4">Cadastrar Voo</h1>
+</div>
+ <form method="post">
+      <div class='form-group'>
+        <label for='nVoo'>Número do Voo</label>
+        <input asp-for="nVoo" type="text" class="form-control" placeholder="Digite o Número do Voo">
+      </div>
+      <br />
+      <div class="form-group">
+        <label for='data'>Data</label>
+        <input asp-for="data" type="date" class="form-control" placeholder="Digite a data do Voo">
+      </div>
+      <br />
+       <div class="form-group">
+        <label for='horario'>Horario</label>
+        <input asp-for="horario" type="datetime" class="form-control" placeholder="Digite o Horário do Voo">
+      </div>
+       <br />
+      <div class="form-group">
+        <label for='localPartida'>Local de Partida</label>
+        <input asp-for="localPartida" type="text" class="form-control" placeholder="Digite o local de partida do Voo">
+      </div>
+      <br />
+       <br />
+      <div class="form-group">
+        <label for='localChegada'>Local de Chegada</label>
+        <input asp-for="localChegada" type="text" class="form-control" placeholder="Digite o local de chegada do Voo">
+      </div>
+      <br />
+       <br />
+      <div class="form-group">
+        <label for='valorNormal'>Valor Normal da Passagem</label>
+        <input asp-for="valorNormal" type="number" class="form-control" placeholder="Digite o valor normal da Passagem" >
+      </div>
+      <br />
+       <br />
+      <div class="form-group">
+        <label for='valorEspecial'>Valor Especial da Passagem</label>
+        <input asp-for="valorEspecial" type="number" class="form-control" placeholder="Digite o valor especial da Passagem" >
+      </div>
+      <br />
+    <br />
+    <div class="form-group">
+        <label for='aviaoId'>Avião que realizara o Voo</label>
+        <input asp-for="aviaoId" type="number" class="form-control" placeholder="Digite o número do Avião que realizará a Viagem">
+    </div>
+    <br />
+      <button type='submit' class='btn btn-primary' asp-controller='Aviao' asp-action="" >Criar</button>
+      <a class='btn btn-secondary' role='button' asp-controller='Aviao' asp-action='Index'>Voltar</a>
+ </form>

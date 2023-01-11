@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Cadastrar Aviao";
+}
+
+
+<div class='text-center'>
+    <h1 class="display-4">Cadastrar Avião</h1>
+</div>
+ <form  method="post">
+      <div class='form-group'>
+        <label for='nRegistro'>Número de Registro</label>
+        <input type="text" class="form-control"placeholder="Digite o Número de Registro do Avião" >
+      </div>
+      <br />
+      <div class="form-group">
+        <label for='modelo'>Modelo</label>
+        <input type="text" class="form-control" placeholder="Digite o modelo do Avião" >
+      </div>
+      <br />
+       <div class="form-group">
+        <label for='qntdAssentos'>Quantidade de Assentos</label>
+        <input type="number" class="form-control"  placeholder="Digite a Quantidade de Assentos" >
+      </div>
+       <br />
+      <div class="form-group">
+        <label for='qntdEspeciais'>Quantidade de Assentos Especiais</label>
+        <input type="number" class="form-control" placeholder="Digite a Quantidade de Assentos Especiais" >
+      </div>
+          <button type='submit' class='btn btn-primary' >Criar</button>
+      <a class='btn btn-secondary' role='button' asp-controller='Aviao' asp-action='Index'>Voltar</a>
+ </form>

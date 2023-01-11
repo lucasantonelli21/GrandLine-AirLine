@@ -1,0 +1,77 @@
+﻿h2 {
+    margin-bottom: 30px;
+}
+
+/* id */
+
+#primeiro {
+    background-color: #0078f0;
+    color: white;
+    font-family: "Ubuntu";
+    padding: 50px 0px 50px 0px;
+}
+
+#meio {
+    padding: 5% 10%;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+}
+
+#fim {
+    background-color: #0078f0;
+}
+
+#footer {
+    text-align: center;
+}
+
+
+/* classes */
+
+.subtitulo {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 105px;
+    left: 17px;
+}
+
+.navbar {
+    padding-bottom: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0px 18px;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    font-family: "Montserrat";
+    color: white;
+    padding-left: 200px;
+}
+
+.imagem {
+    width: 30%;
+}
+
+.card {
+    text-align: center;
+    padding: 2%;
+    width: 75%;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    margin: 20px 0px 20px 0px;
+}
+
+.redesSociais {
+    padding: 20px;
+}

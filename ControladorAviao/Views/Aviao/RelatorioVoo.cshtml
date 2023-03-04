@@ -4,31 +4,6 @@
 }
 
 <div class="text-center">
-
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" asp-controller="Aviao" asp-action="CadastrarVoo" role="button">Adicionar novo Voo</a>
-    </div>
-
-    <br />
-
-    @if (TempData["MensagemSucesso"] != null)
-    {
-        <div class="alert alert-success" role="alert">
-            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemSucesso"]
-        </div>
-    }
-
-    @if (TempData["MensagemErro"] != null)
-    {
-        <div class="alert alert-danger" role="alert">
-            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemErro"]
-        </div>
-    }
-
-    <br />
-
     <h1 class="display-4">Listagem de Voos</h1>
 
     <table id="table-voos" class="display" style="width:100%">
@@ -51,14 +26,14 @@
                 foreach (var voo in Model)
                 {
                     <tr>
-                        <td>voo.nVoo</td>
-                        <td>voo.Data</td>
-                        <td>voo.horario</td>
-                        <td>voo.localPartida</td>
-                        <td>voo.localChegada</td>
-                        <td>voo.valorNormal</td>
-                        <td>voo.valorEspecial</td>
-                        <td>voo.aviaoId</td>
+                        <td>@voo.nVoo</td>
+                        <td>@voo.data</td>
+                        <td>@voo.horario</td>
+                        <td>@voo.localPartida</td>
+                        <td>@voo.localChegada</td>
+                        <td>@voo.valorNormal</td>
+                        <td>@voo.valorEspecial</td>
+                        <td>@voo.aviaoId</td>
                         <td></td>
                         <td></td>
                         <td>

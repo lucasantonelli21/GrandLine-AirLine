@@ -7,11 +7,14 @@
 <div class='text-center'>
     <h1 class="display-4">Cadastrar Voo</h1>
 </div>
- <form method="post">
-      <div class='form-group'>
-        <label for='nVoo'>Número do Voo</label>
-        <input asp-for="nVoo" type="text" class="form-control" placeholder="Digite o Número do Voo">
-      </div>
+<form asp-controller="Aviao" asp-action="CadastrarVoo" method="post">
+        <br />
+        <div class="form-group">
+            <label for='aviaoId'>Registro do Avião</label>
+            <input asp-for="aviaoId" type="number" class="form-control" placeholder="Digite o número de registro do Avião">
+        </div>
+        <br /
+
       <br />
       <div class="form-group">
         <label for='data'>Data</label>
@@ -46,12 +49,7 @@
         <input asp-for="valorEspecial" type="number" class="form-control" placeholder="Digite o valor especial da Passagem" >
       </div>
       <br />
-    <br />
-    <div class="form-group">
-        <label for='aviaoId'>Avião que realizara o Voo</label>
-        <input asp-for="aviaoId" type="number" class="form-control" placeholder="Digite o número do Avião que realizará a Viagem">
-    </div>
-    <br />
-      <button type='submit' class='btn btn-primary' asp-controller='Aviao' asp-action="" >Criar</button>
+    
+      <button type='submit' class='btn btn-primary' >Criar</button>
       <a class='btn btn-secondary' role='button' asp-controller='Aviao' asp-action='Index'>Voltar</a>
  </form>

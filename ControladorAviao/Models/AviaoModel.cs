@@ -7,6 +7,7 @@ namespace ControladorAviao.Models
     [Table ("Avioes")]
     public class AviaoModel
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("NumeroRegistro")]
         [Display(Name = "nRegistro")]
         [Key]

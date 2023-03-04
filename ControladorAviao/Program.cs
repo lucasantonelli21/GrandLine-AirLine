@@ -1,4 +1,5 @@
 using ControladorAviao.Context;
+using ControladorAviao.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer("Data Source=DESKTOP-EA490PO; TrustServerCertificate=True; Initial Catalog=ControleAvioes;Integrated Security=True "));
+builder.Services.AddTransient<IVooRepository,VooRepository>();
+builder.Services.AddTransient<IAviaoRepository, AviaoRepository>();
 
 var app = builder.Build();
 

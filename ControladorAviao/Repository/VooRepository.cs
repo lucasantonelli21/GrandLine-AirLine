@@ -11,5 +11,16 @@ namespace ControladorAviao.Repository
             _context = context;
         }
         public IEnumerable<VooModel> Voos => _context.Voos;
+
+        public AviaoModel GetAviaoModel(int aviaoId) => _context.Avioes.FirstOrDefault(i => i.aviaoId == aviaoId);
+        public VooModel Cadastrar(VooModel voo)
+        {
+            _context.Voos.Add(voo);
+            _context.SaveChanges();
+            return voo;
+        }
+
+
+        
     }
 }
